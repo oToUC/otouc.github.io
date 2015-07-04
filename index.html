@@ -65,6 +65,162 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-canvas-countdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/04/canvas-countdown/" class="article-date">
+  <time datetime="2015-07-04T12:19:53.000Z" itemprop="datePublished">2015-07-04</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/04/canvas-countdown/">canvas-倒计时</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="Step_1(相关知识)">Step 1(相关知识)</h2><ol>
+<li>格子系统</li>
+<li>点阵数据</li>
+<li>javascript中月份是从0开始的如： const endTime = new Date(2015,6,8,18,24,52)</li>
+<li>getTime方法返回了当前时间(new Date())距1970年1月1日0时0分0秒的毫秒数</li>
+<li>context.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)<br>对一个矩形空间里的图像进行刷新操作，避免下一帧的图像叠加</li>
+<li>endTime.setTime( endTime.getTime() + 3600*1000 )</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://otouc.com/2015/07/04/canvas-countdown/" data-id="cibp39gt6000011qbby59whtr" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-canvas-arc-circle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/03/canvas-arc-circle/" class="article-date">
+  <time datetime="2015-07-03T12:19:53.000Z" itemprop="datePublished">2015-07-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/03/canvas-arc-circle/">canvas-画弧和圆</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>{ <strong>draw: arc</strong> }</p>
+</blockquote>
+<h3 id="画弧其实我们可以很容易联想到以下几点？（弧是圆中的一部分）">画弧其实我们可以很容易联想到以下几点？（弧是圆中的一部分）</h3><ol>
+<li>知道圆的<strong>中心点(x, y)</strong></li>
+<li>知道圆的<strong>半径</strong></li>
+<li>知道弧在圆上的<strong>开始于某个弧度</strong></li>
+<li>知道弧在圆上的<strong>结束于某个弧度</strong></li>
+<li>是<strong>顺时针</strong>画，还是<strong>逆时针</strong>画</li>
+</ol>
+<ul>
+<li>因此在canvas中的对应的arc方法参数也就不言而喻了<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//anticlockwise:逆时针的</span></span><br><span class="line">context.arc(x, y, radius, startingAngle, endingAngle, anticlockwise=<span class="literal">false</span>)</span><br></pre></td></tr></table></figure></li>
+<li>实际演练<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//一个圆2π个弧度, arc函数也是设置我们将要绘制弧的状态</span></span><br><span class="line"><span class="comment">//第六个参数可选, 默认是顺时针</span></span><br><span class="line">context.arc(<span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">0</span>, <span class="number">1.5</span>*<span class="built_in">Math</span>.PI, <span class="literal">false</span>);</span><br><span class="line"><span class="comment">//具体渲染</span></span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol>
+<li>beginPath()指的是重新规划一条路径</li>
+<li>closePath()指的是要结束当前的路径，如果当前的路径没有封闭的话，会自动让当前的路径封闭</li>
+<li>beginPath() 与 closePath()不一定要成对出现</li>
+<li>对于context.fill(), closePath()写与不写都是先把路径封闭，然后再填充</li>
+</ol>
+<ul>
+<li>实际演练<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.querySelector(<span class="string">'canvas'</span>),</span><br><span class="line">    context = canvas.getContext(<span class="string">'2d'</span>);</span><br><span class="line"></span><br><span class="line">canvas.width = <span class="number">1024</span>;</span><br><span class="line">canvas.height = <span class="number">768</span>;</span><br><span class="line"></span><br><span class="line">context.lineWidth = <span class="number">5</span>;</span><br><span class="line">context.strokeStyle = <span class="string">'#005588'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.arc(<span class="number">100</span>+i*<span class="number">90</span>,<span class="number">100</span>,<span class="number">40</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="built_in">Math</span>.PI * (i+<span class="number">1</span>)/<span class="number">10</span>);</span><br><span class="line">    context.closePath();</span><br><span class="line"></span><br><span class="line">    context.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.arc(<span class="number">100</span>+i*<span class="number">90</span>,<span class="number">200</span>,<span class="number">40</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="built_in">Math</span>.PI * (i+<span class="number">1</span>)/<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">    context.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.arc(<span class="number">100</span>+i*<span class="number">90</span>,<span class="number">300</span>,<span class="number">40</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="built_in">Math</span>.PI * (i+<span class="number">1</span>)/<span class="number">10</span>, <span class="literal">true</span>);</span><br><span class="line">    context.closePath();</span><br><span class="line"></span><br><span class="line">    context.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.arc(<span class="number">100</span>+i*<span class="number">90</span>,<span class="number">400</span>,<span class="number">40</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="built_in">Math</span>.PI * (i+<span class="number">1</span>)/<span class="number">10</span>, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">    context.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">context.fillStyle = <span class="string">'#005588'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.arc(<span class="number">100</span>+i*<span class="number">90</span>,<span class="number">500</span>,<span class="number">40</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="built_in">Math</span>.PI * (i+<span class="number">1</span>)/<span class="number">10</span>);</span><br><span class="line">    context.closePath();</span><br><span class="line"></span><br><span class="line">    context.fill();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">    context.beginPath();</span><br><span class="line">    context.arc(<span class="number">100</span>+i*<span class="number">90</span>,<span class="number">600</span>,<span class="number">40</span>, <span class="number">0</span>, <span class="number">2</span>*<span class="built_in">Math</span>.PI * (i+<span class="number">1</span>)/<span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">    context.fill();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://otouc.com/2015/07/03/canvas-arc-circle/" data-id="cibnlc3xx0000nwqb5kai0txp" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-canvas-tangram" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/03/canvas-tangram/" class="article-date">
+  <time datetime="2015-07-03T10:18:59.000Z" itemprop="datePublished">2015-07-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/03/canvas-tangram/">canvas-画一个七巧板</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>{ <strong>draw: tangram</strong> }</p>
+</blockquote>
+<ol>
+<li><strong>既然是七巧板，那么里面就应该有⑦块板子的信息</strong><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> tangram = [</span><br><span class="line">    <span class="comment">//the first</span></span><br><span class="line">    &#123;</span><br><span class="line">      p:[<span class="comment">//板子的各个顶点坐标(x,y)，放便canvas绘制</span></span><br><span class="line">          &#123;x:<span class="number">0</span>, y:<span class="number">0</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">800</span>, y:<span class="number">0</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">400</span>, y:<span class="number">400</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      color:<span class="string">"#caff67"</span><span class="comment">//板子要填充的颜色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//the second</span></span><br><span class="line">    &#123;</span><br><span class="line">      p:[<span class="comment">//板子的各个顶点坐标(x,y)，放便canvas绘制</span></span><br><span class="line">          &#123;x:<span class="number">0</span>, y:<span class="number">0</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">400</span>, y:<span class="number">400</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">0</span>, y:<span class="number">800</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      color:<span class="string">"#67becf"</span><span class="comment">//板子要填充的颜色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//the third</span></span><br><span class="line">    &#123;</span><br><span class="line">      p:[<span class="comment">//板子的各个顶点坐标(x,y)，放便canvas绘制</span></span><br><span class="line">          &#123;x:<span class="number">800</span>, y:<span class="number">0</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">800</span>, y:<span class="number">400</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">600</span>, y:<span class="number">600</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">600</span>, y:<span class="number">200</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      color:<span class="string">"#ef3d61"</span><span class="comment">//板子要填充的颜色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//the fourth</span></span><br><span class="line">    &#123;</span><br><span class="line">      p:[<span class="comment">//板子的各个顶点坐标(x,y)，放便canvas绘制</span></span><br><span class="line">          &#123;x:<span class="number">600</span>, y:<span class="number">200</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">600</span>, y:<span class="number">600</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">400</span>, y:<span class="number">400</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      color:<span class="string">"#f9f51a"</span><span class="comment">//板子要填充的颜色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//the fifth</span></span><br><span class="line">    &#123;</span><br><span class="line">      p:[<span class="comment">//板子的各个顶点坐标(x,y)，放便canvas绘制</span></span><br><span class="line">          &#123;x:<span class="number">400</span>, y:<span class="number">400</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">600</span>, y:<span class="number">600</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">400</span>, y:<span class="number">800</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">200</span>, y:<span class="number">600</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      color:<span class="string">"#a594c0"</span><span class="comment">//板子要填充的颜色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//the sixth</span></span><br><span class="line">    &#123;</span><br><span class="line">      p:[<span class="comment">//板子的各个顶点坐标(x,y)，放便canvas绘制</span></span><br><span class="line">          &#123;x:<span class="number">200</span>, y:<span class="number">600</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">400</span>, y:<span class="number">800</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">0</span>, y:<span class="number">800</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      color:<span class="string">"#fa8ecc"</span><span class="comment">//板子要填充的颜色</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="comment">//the seventh</span></span><br><span class="line">    &#123;</span><br><span class="line">      p:[<span class="comment">//板子的各个顶点坐标(x,y)，放便canvas绘制</span></span><br><span class="line">          &#123;x:<span class="number">800</span>, y:<span class="number">400</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">800</span>, y:<span class="number">800</span>&#125;,</span><br><span class="line">          &#123;x:<span class="number">400</span>, y:<span class="number">800</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      color:<span class="string">"#f6ca29"</span><span class="comment">//板子要填充的颜色</span></span><br><span class="line">    &#125;</span><br><span class="line">];</span><br></pre></td></tr></table></figure></li>
+<li><strong>具体的Code. It is so easy~~</strong><figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">exec</span><span class="params">()</span>&#123;</span></span><br><span class="line">    var canvas = document.querySelector<span class="params">('canvas')</span>,</span><br><span class="line">        context = canvas.getContext<span class="params">('<span class="number">2</span>d')</span>;</span><br><span class="line"></span><br><span class="line">    tangram.forEach<span class="params">(function<span class="params">(obj, index)</span>&#123;</span><br><span class="line">        drawPanel<span class="params">(obj, context)</span>;</span><br><span class="line">    &#125;)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawPanel</span><span class="params">(panel, context)</span>&#123;</span></span><br><span class="line">        context.beginPath<span class="params">()</span>;</span><br><span class="line">        context.moveTo<span class="params">(panel.p[<span class="number">0</span>].x, panel.p[<span class="number">0</span>].y)</span>;</span><br><span class="line">        <span class="keyword">for</span><span class="params">( var i=<span class="number">1</span>, obj; obj=panel.p[i++]; )</span>&#123;</span><br><span class="line">            context.lineTo<span class="params">(obj.x, obj.y)</span></span><br><span class="line">        &#125;</span><br><span class="line">        context.closePath<span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">        context.fillStyle = panel.<span class="built_in">color</span>;</span><br><span class="line">        context.fill<span class="params">()</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">window.onload = <span class="function"><span class="keyword">function</span><span class="params">()</span> &#123;</span></span><br><span class="line">    exec<span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://otouc.com/2015/07/03/canvas-tangram/" data-id="cibnlc3yk0003nwqb2xj71l7y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-canvas-first" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/07/02/canvas-first/" class="article-date">
@@ -133,9 +289,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://otouc.com/2015/07/02/canvas-first/" data-id="cibmf1qcd000030qb5m1sylyb" class="article-share-link">Share</a>
+      <a data-url="http://otouc.com/2015/07/02/canvas-first/" data-id="cibnlc3yn0005nwqbhbzpsd1r" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
     </footer>
   </div>
   
@@ -151,14 +309,28 @@
     
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas初体验/">canvas初体验</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/canvas初体验/" style="font-size: 10px;">canvas初体验</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">4</span></li></ul>
     </div>
   </div>
 
@@ -168,6 +340,18 @@
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/07/04/canvas-countdown/">canvas-倒计时</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/03/canvas-arc-circle/">canvas-画弧和圆</a>
+          </li>
+        
+          <li>
+            <a href="/2015/07/03/canvas-tangram/">canvas-画一个七巧板</a>
+          </li>
         
           <li>
             <a href="/2015/07/02/canvas-first/">canvas系列之初体验①</a>

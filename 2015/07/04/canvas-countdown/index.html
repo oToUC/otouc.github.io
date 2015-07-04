@@ -3,17 +3,33 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | The sun rises early and sets late.</title>
+  <title>canvas-倒计时 | The sun rises early and sets late.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="The sun rises early and sets late.">
-<meta property="og:url" content="http://otouc.com/archives/index.html">
+  <meta name="description" content="Step 1(相关知识)
+格子系统
+点阵数据
+javascript中月份是从0开始的如： const endTime = new Date(2015,6,8,18,24,52)
+getTime方法返回了当前时间(new Date())距1970年1月1日0时0分0秒的毫秒数
+context.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)对一个矩形空间里的图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas-倒计时">
+<meta property="og:url" content="http://otouc.com/2015/07/04/canvas-countdown/index.html">
 <meta property="og:site_name" content="The sun rises early and sets late.">
-<meta property="og:description">
+<meta property="og:description" content="Step 1(相关知识)
+格子系统
+点阵数据
+javascript中月份是从0开始的如： const endTime = new Date(2015,6,8,18,24,52)
+getTime方法返回了当前时间(new Date())距1970年1月1日0时0分0秒的毫秒数
+context.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)对一个矩形空间里的图">
+<meta property="og:updated_time" content="2015-07-04T09:47:51.095Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The sun rises early and sets late.">
-<meta name="twitter:description">
+<meta name="twitter:title" content="canvas-倒计时">
+<meta name="twitter:description" content="Step 1(相关知识)
+格子系统
+点阵数据
+javascript中月份是从0开始的如： const endTime = new Date(2015,6,8,18,24,52)
+getTime方法返回了当前时间(new Date())距1970年1月1日0时0分0秒的毫秒数
+context.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)对一个矩形空间里的图">
   
     <link rel="alternative" href="/atom.xml" title="The sun rises early and sets late." type="application/atom+xml">
   
@@ -63,96 +79,63 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/04/canvas-countdown/" class="archive-article-date">
-  <time datetime="2015-07-04T12:19:53.000Z" itemprop="datePublished">Jul 4</time>
+        <section id="main"><article id="post-canvas-countdown" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/04/canvas-countdown/" class="article-date">
+  <time datetime="2015-07-04T12:19:53.000Z" itemprop="datePublished">2015-07-04</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/04/canvas-countdown/">canvas-倒计时</a>
+    <h1 class="article-title" itemprop="name">
+      canvas-倒计时
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/03/canvas-arc-circle/" class="archive-article-date">
-  <time datetime="2015-07-03T12:19:53.000Z" itemprop="datePublished">Jul 3</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/03/canvas-arc-circle/">canvas-画弧和圆</a>
-    </h1>
-  
+        <hr>
+<h2 id="Step_1(相关知识)">Step 1(相关知识)</h2><ol>
+<li>格子系统</li>
+<li>点阵数据</li>
+<li>javascript中月份是从0开始的如： const endTime = new Date(2015,6,8,18,24,52)</li>
+<li>getTime方法返回了当前时间(new Date())距1970年1月1日0时0分0秒的毫秒数</li>
+<li>context.clearRect(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)<br>对一个矩形空间里的图像进行刷新操作，避免下一帧的图像叠加</li>
+<li>endTime.setTime( endTime.getTime() + 3600*1000 )</li>
+</ol>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/03/canvas-tangram/" class="archive-article-date">
-  <time datetime="2015-07-03T10:18:59.000Z" itemprop="datePublished">Jul 3</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/03/canvas-tangram/">canvas-画一个七巧板</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2015/07/02/canvas-first/" class="archive-article-date">
-  <time datetime="2015-07-02T11:49:55.000Z" itemprop="datePublished">Jul 2</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://otouc.com/2015/07/04/canvas-countdown/" data-id="cibp39gt6000011qbby59whtr" class="article-share-link">Share</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/07/02/canvas-first/">canvas系列之初体验①</a>
-    </h1>
-  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
 
-    </header>
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/07/03/canvas-arc-circle/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">canvas-画弧和圆</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
 </section>
         
           <aside id="sidebar">
