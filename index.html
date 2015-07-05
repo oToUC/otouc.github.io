@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>The sun rises early and sets late.</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description">
 <meta property="og:type" content="website">
-<meta property="og:title" content="The sun rises early and sets late.">
-<meta property="og:url" content="http://otouc.com/index.html">
-<meta property="og:site_name" content="The sun rises early and sets late.">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Hexo">
 <meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The sun rises early and sets late.">
+<meta name="twitter:title" content="Hexo">
 <meta name="twitter:description">
   
-    <link rel="alternative" href="/atom.xml" title="The sun rises early and sets late." type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -33,7 +33,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">The sun rises early and sets late.</a>
+        <a href="/" id="logo">Hexo</a>
       </h1>
       
     </div>
@@ -53,13 +53,294 @@
         <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://otouc.com"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
       </div>
     </div>
   </div>
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-canvas-rectangle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/05/canvas-rectangle/" class="article-date">
+  <time datetime="2015-07-05T10:18:59.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/canvas-rectangle/">canvas-矩形</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>Draw a Rectangle</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ctx.moveTo(shape.x, shape.y);</span><br><span class="line">ctx.lineTo(shape.x + shape.width, shape.y);</span><br><span class="line">ctx.lineTo(shape.x + shape.width, shape.y + shape.height);</span><br><span class="line">ctx.lineTo(shape.x, shape.y + shape.height);</span><br><span class="line">---&gt;&gt;就相当于如下编程接口</span><br><span class="line">ctx.rect(x, y, width, height);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>以下几行So cool～～</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ctx.strokeRect(x, y, width, height);</span><br><span class="line">&amp;</span><br><span class="line">ctx.fillRect(x, y, width, height);</span><br></pre></td></tr></table></figure>
+<blockquote><p>{do:[‘矩形’,’覆盖’,’透明色’]}</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawShape</span>(<span class="params"> shape, ctx </span>)</span>&#123;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.moveTo(shape.x, shape.y);</span><br><span class="line">    ctx.lineTo(shape.x + shape.width, shape.y);</span><br><span class="line">    ctx.lineTo(shape.x + shape.width, shape.y + shape.height);</span><br><span class="line">    ctx.lineTo(shape.x, shape.y + shape.height);</span><br><span class="line">    ctx.closePath();<span class="comment">//closePath会自动帮我们首尾衔接</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//canvas 是基于装态的绘制，以下是具体渲染</span></span><br><span class="line">    <span class="comment">//现fill</span></span><br><span class="line">    ctx.fillStyle = shape.fillStyle;</span><br><span class="line">    ctx.fill();</span><br><span class="line">    <span class="comment">//后stroke</span></span><br><span class="line">    ctx.strokeStyle = shape.strokeStyle;</span><br><span class="line">    ctx.lineWidth = shape.lineWidth;</span><br><span class="line">    ctx.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawShape2</span>(<span class="params"> shape, ctx </span>)</span>&#123;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.rect(shape.x, shape.y, shape.width, shape.height);</span><br><span class="line">    ctx.closePath();</span><br><span class="line"></span><br><span class="line">    ctx.fillStyle = shape.fillStyle;</span><br><span class="line">    ctx.fill();</span><br><span class="line"></span><br><span class="line">    ctx.strokeStyle = shape.strokeStyle;</span><br><span class="line">    ctx.lineWidth = shape.lineWidth;</span><br><span class="line">    ctx.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawShape3</span>(<span class="params"> shape, ctx </span>)</span>&#123;</span><br><span class="line">  ctx.strokeStyle = shape.strokeStyle;</span><br><span class="line">  ctx.lineWidth = shape.lineWidth;</span><br><span class="line"></span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.strokeRect(shape.x, shape.y, shape.width, shape.height);</span><br><span class="line">  ctx.closePath();</span><br><span class="line"></span><br><span class="line">  ctx.fill();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawShape4</span>(<span class="params"> shape, ctx </span>)</span>&#123;</span><br><span class="line">  ctx.fillStyle = shape.fillStyle;</span><br><span class="line"></span><br><span class="line">  ctx.beginPath();</span><br><span class="line">  ctx.fillRect(shape.x, shape.y, shape.width, shape.height);</span><br><span class="line">  ctx.closePath();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawShape5</span>(<span class="params"> shape, ctx </span>)</span>&#123;</span><br><span class="line">  ctx.lineWidth = shape.lineWidth;</span><br><span class="line">  ctx.strokeStyle = shape.strokeStyle;</span><br><span class="line">  ctx.fillStyle = <span class="string">'rgba(100,100,200,0.8)'</span>;</span><br><span class="line"></span><br><span class="line">  ctx.fillRect(shape.x, shape.y, shape.width, shape.height);</span><br><span class="line">  ctx.strokeRect(shape.x, shape.y, shape.width, shape.height);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> cvs = <span class="built_in">document</span>.querySelector(<span class="string">'canvas'</span>),</span><br><span class="line">        ctx = cvs.getContext(<span class="string">'2d'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> shape = &#123;</span><br><span class="line">        x: <span class="number">100</span>,</span><br><span class="line">        y: <span class="number">100</span>,</span><br><span class="line">        width: <span class="number">100</span>,</span><br><span class="line">        height: <span class="number">100</span>,</span><br><span class="line">        strokeStyle: <span class="string">'#f093af'</span>,</span><br><span class="line">        lineWidth: <span class="string">'5'</span>,</span><br><span class="line">        fillStyle: <span class="string">'#ff0066'</span></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    drawShape(shape, ctx);</span><br><span class="line"></span><br><span class="line">    shape.x = <span class="number">250</span>;</span><br><span class="line">    drawShape2(shape, ctx);</span><br><span class="line"></span><br><span class="line">    shape.x = <span class="number">400</span>;</span><br><span class="line">    drawShape3(shape, ctx);</span><br><span class="line"></span><br><span class="line">    shape.x = <span class="number">550</span>;</span><br><span class="line">    drawShape4(shape, ctx);</span><br><span class="line"></span><br><span class="line">    shape.x = <span class="number">600</span>;</span><br><span class="line">    drawShape5(shape, ctx);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/05/canvas-rectangle/" data-id="cibqmyi4r000b8uqbb7095s6i" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-canvas-transform-2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/05/canvas-transform-2/" class="article-date">
+  <time datetime="2015-07-05T10:18:59.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/canvas-transform-2/">canvas-图形变换2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>图形变换</p>
+</blockquote>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">位移 <span class="built_in">translate</span><span class="params">(x, y)</span>;</span><br><span class="line">旋转 <span class="built_in">rotate</span><span class="params">( deg )</span>;</span><br><span class="line">缩放 <span class="built_in">scale</span><span class="params">(sx, sy)</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="canvas的图形变换函数是叠加的">canvas的图形变换函数是叠加的</h3><ul>
+<li>记得逆转~translate(100, 100)→translate(-100, -100)→translate(300, 300)</li>
+<li>但这样实在是太麻烦了，，</li>
+<li>因此save(), restore()出马了～～<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">context.save(); <span class="comment">//把之前的装态保存一下</span></span><br><span class="line">context.fillStyle = <span class="string">"red"</span>;</span><br><span class="line">context.translate(<span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">context.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line">context.restore(); <span class="comment">//恢复到之前的装态</span></span><br><span class="line"></span><br><span class="line">context.save(); <span class="comment">//把之前的装态保存一下</span></span><br><span class="line">context.fillStyle = <span class="string">"green"</span>;</span><br><span class="line">context.translate(<span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line">context.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line">context.restore(); <span class="comment">//恢复到之前的装态</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote><p>Canvas状态的保存与恢复<br>save()<br>restore()<br>当我们绘制一个整体的元素时，特别是用到图形变换时注意使用save()与restore()<br>来保证canvas图形状态的绘制正确</p>
+</blockquote>
+<h2 id="应用translate,_rotate_&amp;_scale">应用translate, rotate &amp; scale</h2><blockquote><p>scale()函数会有副作用，坐标，线条宽度和本身都会scale</p>
+</blockquote>
+<blockquote><p>变换矩阵<br>a     c     e<br>b     d     f<br>0     0     1</p>
+<p>1     0     0<br>0     1     0<br>0     0     1</p>
+<p>a 水平缩放(1)<br>b 水平倾斜(0)<br>c 垂直倾斜(0)<br>d 垂直缩放(1)<br>e 水平位移(0)<br>f 垂直位移(0)</p>
+<p>a d 缩放<br>b c 倾斜<br>e f 位移<br>transform(a, b, c, d, e, f);<br>默认<br>transform(1, 0, 0, 1, 0, 0);</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">transform(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">transform(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">transform(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>, <span class="number">100</span>);</span><br><span class="line">setTransform(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">100</span>, <span class="number">100</span>);<span class="comment">//不和上面transform叠加，全新设置</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/05/canvas-transform-2/" data-id="cibqmyi4l00058uqbg4pnw0qg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-canvas-lineCap" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/05/canvas-lineCap/" class="article-date">
+  <time datetime="2015-07-05T10:18:59.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/canvas-lineCap/">canvas-线条的帽子</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>lineCap</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">butt(<span class="keyword">default</span>)</span><br><span class="line">round</span><br><span class="line">square</span><br></pre></td></tr></table></figure>
+<blockquote><p>do it~</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">lineCap</span>(<span class="params">ctx</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> colors = [<span class="string">'#6699cc'</span>, <span class="string">'#3399cc'</span>, <span class="string">'#6633cc'</span>],</span><br><span class="line">        caps = [ <span class="string">'butt'</span>, <span class="string">'round'</span>, <span class="string">'square'</span>];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>( <span class="keyword">var</span> i=<span class="number">0</span>, color, cap;color=colors[i], cap=caps[i++]; )&#123;</span><br><span class="line">      ctx.beginPath();</span><br><span class="line">      ctx.moveTo(<span class="number">50</span>, <span class="number">80</span>*(i+<span class="number">1</span>));</span><br><span class="line">      ctx.lineTo(<span class="number">400</span>, <span class="number">80</span>*(i+<span class="number">1</span>));</span><br><span class="line">      <span class="comment">//ctx.closePath();它不能存在, 如若存在，帽子将不会出来</span></span><br><span class="line">      ctx.strokeStyle = color;</span><br><span class="line">      ctx.lineCap = cap;</span><br><span class="line">      <span class="built_in">console</span>.log(cap);</span><br><span class="line">      ctx.lineWidth = <span class="number">50</span>;</span><br><span class="line">      render(ctx);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">baseLine</span>(<span class="params">ctx</span>)</span>&#123;</span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.moveTo(<span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line">    ctx.lineTo(<span class="number">50</span>, <span class="number">450</span>);</span><br><span class="line">    ctx.moveTo(<span class="number">400</span>, <span class="number">50</span>);</span><br><span class="line">    ctx.lineTo(<span class="number">400</span>, <span class="number">450</span>);</span><br><span class="line">    ctx.closePath();</span><br><span class="line"></span><br><span class="line">    ctx.strokeStyle = <span class="string">'#ff00ff'</span>;</span><br><span class="line">    ctx.lineWidth = <span class="number">1</span>;</span><br><span class="line">    render(ctx);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">render</span>(<span class="params">ctx</span>)</span>&#123;</span><br><span class="line">    ctx.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> cvs = <span class="built_in">document</span>.querySelector(<span class="string">'canvas'</span>),</span><br><span class="line">      ctx = cvs.getContext(<span class="string">'2d'</span>);</span><br><span class="line">  lineCap(ctx);</span><br><span class="line">  baseLine(ctx);</span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/05/canvas-lineCap/" data-id="cibqmyi4w000f8uqb5rqbuxrg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-canvas-star" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/05/canvas-star/" class="article-date">
+  <time datetime="2015-07-05T10:18:59.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/canvas-star/">canvas-五角星</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>❀一个五角星</p>
+</blockquote>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawStar</span><span class="params">( star, ctx )</span>&#123;</span></span><br><span class="line">     ctx.beginPath<span class="params">()</span>;</span><br><span class="line">     <span class="keyword">for</span><span class="params">(var i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span></span><br><span class="line">     &#123;</span><br><span class="line">       ctx.lineTo<span class="params">( star.x + Math.cos<span class="params">(<span class="params">(<span class="number">18</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.R,</span><br><span class="line">                   star.y - Math.sin<span class="params">(<span class="params">(<span class="number">18</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.R )</span>;</span><br><span class="line"></span><br><span class="line">       ctx.lineTo<span class="params">( star.x + Math.cos<span class="params">(<span class="params">(<span class="number">54</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.r,</span><br><span class="line">                   star.y - Math.sin<span class="params">(<span class="params">(<span class="number">54</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.r )</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     ctx.closePath<span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">     ctx.stroke<span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> document.addEventListener<span class="params">('DOMContentLoaded',function<span class="params">()</span>&#123;</span><br><span class="line">   //基于圆来绘制五角星</span><br><span class="line">   var star = &#123;</span><br><span class="line">       x:<span class="number">400</span>,</span><br><span class="line">       y:<span class="number">400</span>, //圆心坐标</span><br><span class="line">       r:<span class="number">100</span>,  //小圆的半径</span><br><span class="line">       R:<span class="number">200</span>, //大圆的半径</span><br><span class="line">       rot:<span class="number">0</span>  //旋转的角度</span><br><span class="line">   &#125;;</span><br><span class="line">   var cvs = document.querySelector<span class="params">('canvas')</span>,</span><br><span class="line">       ctx = cvs.getContext<span class="params">('<span class="number">2</span>d')</span>;</span><br><span class="line"></span><br><span class="line">   drawStar<span class="params">( star, ctx )</span>;</span><br><span class="line"> &#125;, <span class="literal">false</span>)</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/05/canvas-star/" data-id="cibqmyi4p00098uqbhm6sq2bx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-canvas-transform" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/05/canvas-transform/" class="article-date">
+  <time datetime="2015-07-05T10:18:59.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/canvas-transform/">canvas-图形变换</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>一片星空</p>
+</blockquote>
+<figure class="highlight openscad"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawStar</span><span class="params">( star, ctx )</span>&#123;</span></span><br><span class="line"></span><br><span class="line">     ctx.beginPath<span class="params">()</span>;</span><br><span class="line">     <span class="keyword">for</span><span class="params">(var i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span></span><br><span class="line">     &#123;</span><br><span class="line">       ctx.lineTo<span class="params">( star.x + Math.cos<span class="params">(<span class="params">(<span class="number">18</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.R,</span><br><span class="line">                   star.y - Math.sin<span class="params">(<span class="params">(<span class="number">18</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.R )</span>;</span><br><span class="line"></span><br><span class="line">       ctx.lineTo<span class="params">( star.x + Math.cos<span class="params">(<span class="params">(<span class="number">54</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.r,</span><br><span class="line">                   star.y - Math.sin<span class="params">(<span class="params">(<span class="number">54</span>+i*<span class="number">72</span>-star.rot)</span> * <span class="params">(Math.<span class="literal">PI</span>/<span class="number">180</span>)</span>)</span> * star.r )</span>;</span><br><span class="line">     &#125;</span><br><span class="line">     ctx.closePath<span class="params">()</span>;</span><br><span class="line"></span><br><span class="line">     ctx.fillStyle = star.fillStyle;</span><br><span class="line">     ctx.strokeStyle = star.strokeStyle;</span><br><span class="line">     ctx.lineWidth = star.lineWidth;</span><br><span class="line">     ctx.lineJoin = star.lineJoin;</span><br><span class="line"></span><br><span class="line">     ctx.fill<span class="params">()</span>;</span><br><span class="line">     ctx.stroke<span class="params">()</span>;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getStar</span><span class="params">()</span>&#123;</span></span><br><span class="line">     return &#123;</span><br><span class="line">         x:<span class="number">300</span>,</span><br><span class="line">         y:<span class="number">300</span>, <span class="comment">//圆心坐标</span></span><br><span class="line">         r:<span class="number">50</span>,  <span class="comment">//小圆的半径</span></span><br><span class="line">         R:<span class="number">100</span>, <span class="comment">//大圆的半径</span></span><br><span class="line">         rot:<span class="number">0</span>,  <span class="comment">//旋转的角度</span></span><br><span class="line">         lineWidth: <span class="number">3</span>,</span><br><span class="line">         lineJoin: '<span class="built_in">round</span>',</span><br><span class="line">         miterLimit: <span class="number">20</span>,</span><br><span class="line">         fillStyle: '<span class="built_in">#</span>fb3',</span><br><span class="line">         strokeStyle: '<span class="built_in">#</span>fd5'</span><br><span class="line">     &#125;;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> var stage = null;</span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">createStage</span><span class="params">()</span>&#123;</span></span><br><span class="line">     <span class="comment">//基于圆来绘制五角星</span></span><br><span class="line">     var cvs = document.querySelector<span class="params">('canvas')</span>,</span><br><span class="line">         ctx = cvs.getContext<span class="params">('<span class="number">2</span>d')</span>;</span><br><span class="line"></span><br><span class="line">     cvs.width = <span class="number">800</span>;</span><br><span class="line">     cvs.height = <span class="number">800</span>;</span><br><span class="line"></span><br><span class="line">     ctx.fillStyle = 'black';</span><br><span class="line">     ctx.fillRect<span class="params">(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height)</span>;</span><br><span class="line"></span><br><span class="line">     stage = ctx;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">drawMoreStars</span><span class="params">()</span>&#123;</span></span><br><span class="line">     var star = getStar<span class="params">()</span>;</span><br><span class="line">     <span class="keyword">for</span><span class="params">( var i=<span class="number">0</span>;i&lt;<span class="number">200</span>;i++)</span>&#123;</span><br><span class="line">         star.x = stage.canvas.width <span class="built_in">*</span> Math.random<span class="params">()</span>;</span><br><span class="line">         star.y = stage.canvas.height <span class="built_in">*</span> Math.random<span class="params">()</span>;</span><br><span class="line">         star.R = Math.random<span class="params">()</span> <span class="built_in">*</span> <span class="number">10</span> + <span class="number">10</span>;</span><br><span class="line">         star.r = star.R / <span class="number">2.0</span>;</span><br><span class="line">         star.rot = Math.random<span class="params">()</span> <span class="built_in">*</span> <span class="number">360</span>;</span><br><span class="line">         drawStar<span class="params">(star, stage)</span>;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> document.addEventListener<span class="params">('DOMContentLoaded',function<span class="params">()</span>&#123;</span><br><span class="line">     createStage<span class="params">()</span>;</span><br><span class="line">     drawMoreStars<span class="params">()</span>;</span><br><span class="line"> &#125;, <span class="literal">false</span>)</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/05/canvas-transform/" data-id="cibqmyi4j00038uqbpzy173xk" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-canvas-lineJoin" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/07/05/canvas-lineJoin/" class="article-date">
+  <time datetime="2015-07-05T10:18:59.000Z" itemprop="datePublished">2015-07-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/05/canvas-lineJoin/">canvas-线条与线条相交的时候所呈现出来的形态</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<blockquote><p>{canvas:’context.lineJoin’}</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">miter(<span class="keyword">default</span>)<span class="comment">//永远呈现出一个尖角的形状</span></span><br><span class="line">bevel<span class="comment">//斜街的形式</span></span><br><span class="line">round<span class="comment">//圆角的形式</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawStar</span>(<span class="params"> star, ctx </span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">     ctx.beginPath();</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;<span class="number">5</span>;i++)</span><br><span class="line">     &#123;</span><br><span class="line">       ctx.lineTo( star.x + <span class="built_in">Math</span>.cos((<span class="number">18</span>+i*<span class="number">72</span>-star.rot) * (<span class="built_in">Math</span>.PI/<span class="number">180</span>)) * star.R,</span><br><span class="line">                   star.y - <span class="built_in">Math</span>.sin((<span class="number">18</span>+i*<span class="number">72</span>-star.rot) * (<span class="built_in">Math</span>.PI/<span class="number">180</span>)) * star.R );</span><br><span class="line"></span><br><span class="line">       ctx.lineTo( star.x + <span class="built_in">Math</span>.cos((<span class="number">54</span>+i*<span class="number">72</span>-star.rot) * (<span class="built_in">Math</span>.PI/<span class="number">180</span>)) * star.r,</span><br><span class="line">                   star.y - <span class="built_in">Math</span>.sin((<span class="number">54</span>+i*<span class="number">72</span>-star.rot) * (<span class="built_in">Math</span>.PI/<span class="number">180</span>)) * star.r );</span><br><span class="line">     &#125;</span><br><span class="line">     ctx.closePath();</span><br><span class="line"></span><br><span class="line">     ctx.lineWidth = star.lineWidth;</span><br><span class="line">     ctx.lineJoin = star.lineJoin;</span><br><span class="line">     ctx.miterLimit = star.miterLimit;<span class="comment">//只有当lineJoin是miter时才有用</span></span><br><span class="line">     <span class="comment">//当使用miter作为线条与线条相接时，所产生的外角与内角之间的距离最大值</span></span><br><span class="line">     <span class="comment">//默认值是10，代表默认值是10个像素，一超过就会使用bevel来显示</span></span><br><span class="line">     ctx.stroke();</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="built_in">document</span>.addEventListener(<span class="string">'DOMContentLoaded'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="comment">//基于圆来绘制五角星</span></span><br><span class="line">   <span class="keyword">var</span> star = &#123;</span><br><span class="line">       x:<span class="number">300</span>,</span><br><span class="line">       y:<span class="number">300</span>, <span class="comment">//圆心坐标</span></span><br><span class="line">       r:<span class="number">20</span>,  <span class="comment">//小圆的半径</span></span><br><span class="line">       R:<span class="number">150</span>, <span class="comment">//大圆的半径</span></span><br><span class="line">       rot:<span class="number">0</span>,  <span class="comment">//旋转的角度</span></span><br><span class="line">       lineWidth: <span class="number">10</span>,</span><br><span class="line">       lineJoin: <span class="string">'miter'</span>,</span><br><span class="line">       miterLimit: <span class="number">20</span></span><br><span class="line">   &#125;;</span><br><span class="line">   <span class="keyword">var</span> cvs = <span class="built_in">document</span>.querySelector(<span class="string">'canvas'</span>),</span><br><span class="line">       ctx = cvs.getContext(<span class="string">'2d'</span>);</span><br><span class="line"></span><br><span class="line">   drawStar( star, ctx );</span><br><span class="line"> &#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="Summary">Summary</h2><p>lineJoin = “miter”(default)<br>           “bevel”<br>           “round”</p>
+<p>miterLimit</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/07/05/canvas-lineJoin/" data-id="cibqmyi4u000d8uqbgp18gv4o" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-canvas-countdown" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -96,7 +377,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://otouc.com/2015/07/04/canvas-countdown/" data-id="cibp3tloq0007o1qb5lv1yhue" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/04/canvas-countdown/" data-id="cibqmyi57000l8uqbdz8ss9cc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
@@ -159,7 +440,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://otouc.com/2015/07/03/canvas-arc-circle/" data-id="cibp3tlnr0000o1qb68xxl5pq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/03/canvas-arc-circle/" data-id="cibqmyi3s00008uqb56y3tp4c" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
@@ -205,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://otouc.com/2015/07/03/canvas-tangram/" data-id="cibp3tlol0003o1qbyyxsa583" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/03/canvas-tangram/" data-id="cibqmyi4n00078uqbdcqm60if" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
@@ -240,91 +521,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
+<blockquote><p><strong> 以下两行就相当于一次moveTo() </strong></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.beginPath();</span><br><span class="line">context.lineTo(<span class="number">100</span>,<span class="number">100</span>);</span><br></pre></td></tr></table></figure>
+<blockquote><p><strong> 标准的做法是在beginPath()与closePath()之间绘制多边形 </strong><br><strong> closePath()会自动帮我们封闭路径（首尾相连） </strong><br><strong> 先fill()后stroke() </strong></p>
+</blockquote>
+<blockquote><p><code>{&quot;实战演练&quot;：&quot;绘制矩形&quot;}</code></p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">drawShape</span>(<span class="params"> shape, ctx </span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">    ctx.beginPath();</span><br><span class="line">    ctx.moveTo(shape.x, shape.y);</span><br><span class="line">    ctx.lineTo(shape.x + shape.width, shape.y);</span><br><span class="line">    ctx.lineTo(shape.x + shape.width, shape.y + shape.height);</span><br><span class="line">    ctx.lineTo(shape.x, shape.y + shape.height);</span><br><span class="line">    ctx.closePath();<span class="comment">//closePath会自动帮我们首尾衔接</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//canvas 是基于装态的绘制，以下是具体渲染</span></span><br><span class="line">    <span class="comment">//现fill</span></span><br><span class="line">    ctx.fillStyle = shape.fillStyle;</span><br><span class="line">    ctx.fill();</span><br><span class="line">    <span class="comment">//后stroke</span></span><br><span class="line">    ctx.strokeStyle = shape.strokeStyle;</span><br><span class="line">    ctx.lineWidth = shape.lineWidth;</span><br><span class="line">    ctx.stroke();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> cvs = <span class="built_in">document</span>.querySelector(<span class="string">'canvas'</span>),</span><br><span class="line">      ctx = cvs.getContext(<span class="string">'2d'</span>);</span><br><span class="line"></span><br><span class="line">    drawShape(&#123;</span><br><span class="line">        x: <span class="number">100</span>,</span><br><span class="line">        y: <span class="number">100</span>,</span><br><span class="line">        width: <span class="number">100</span>,</span><br><span class="line">        height: <span class="number">100</span>,</span><br><span class="line">        strokeStyle: <span class="string">'#f093af'</span>,</span><br><span class="line">        lineWidth: <span class="string">'5'</span>,</span><br><span class="line">        fillStyle: <span class="string">'#ff0066'</span></span><br><span class="line">    &#125;, ctx);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://otouc.com/2015/07/03/canvas-line/" data-id="cibp3u2yc0009o1qbjczg7q8d" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas/">canvas</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-canvas-first" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/07/02/canvas-first/" class="article-date">
-  <time datetime="2015-07-02T11:49:55.000Z" itemprop="datePublished">2015-07-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/02/canvas-first/">canvas系列之初体验①</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h3 id="Step_1">Step 1</h3><blockquote><p><strong> css样式设置画布的宽高只是画布的显示宽高 </strong></p>
-</blockquote>
-<ol>
-<li><p><strong>html</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">canvas</span> <span class="attribute">id</span>=<span class="value">"canvas"</span> <span class="attribute">width</span>=<span class="value">"1024"</span> <span class="attribute">height</span>=<span class="value">"768"</span>&gt;</span><span class="tag">&lt;/<span class="title">canvas</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>javascript</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//得到 canvas 对象</span></span><br><span class="line"><span class="keyword">var</span> canvas = <span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</span><br><span class="line"><span class="comment">//canvas 实际绘图上下文(2d绘图)</span></span><br><span class="line"><span class="keyword">var</span> context = canvas.getContext(<span class="string">'2d'</span>);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h3 id="Step_2">Step 2</h3><blockquote><p><strong> canvas中绘图是一种基于状态的绘图,绘图过程中先设置绘图的状态，然后调用具体的函数做具体的绘制 </strong></p>
-</blockquote>
-<ol>
-<li><p><strong>画一条直线</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//放笔尖到(100,100)的位置</span></span><br><span class="line">context.moveTo(<span class="number">100</span>,<span class="number">100</span>)</span><br><span class="line"><span class="comment">//想要从(100,100)到(700,700)画一条线</span></span><br><span class="line">context.lineTo(<span class="number">700</span>,<span class="number">700</span>)</span><br><span class="line"><span class="comment">//具体渲染</span></span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>绘制一个直角三角形</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">context.moveTo(<span class="number">100</span>, <span class="number">100</span>);<span class="comment">//笔尖的起始点</span></span><br><span class="line">context.lineTo(<span class="number">700</span>, <span class="number">700</span>);<span class="comment">//笔尖要到达的点</span></span><br><span class="line">context.lineTo(<span class="number">100</span>, <span class="number">700</span>);<span class="comment">//笔尖要到达的点</span></span><br><span class="line">context.lineTo(<span class="number">100</span>, <span class="number">100</span>);<span class="comment">//笔尖要到达的点(首尾衔接)</span></span><br><span class="line">context.lineWidth = <span class="number">5</span>;<span class="comment">//笔尖所画线的粗细程度</span></span><br><span class="line"></span><br><span class="line">context.strokeStyle = <span class="string">"#005588"</span>;<span class="comment">//要渲染的颜色</span></span><br><span class="line">context.stroke();<span class="comment">//具体渲染</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>填充多边形</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">context.fillStyle = <span class="string">"rgb(2, 100, 30)"</span>;<span class="comment">//填充多边形的颜色</span></span><br><span class="line">context.fill();<span class="comment">//具体的填充</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>填充+边框（它们的先后顺序会产生不同的效果）</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">context.fillStyle = <span class="string">"rgb(2, 100, 30)"</span>;<span class="comment">//填充多边形的颜色</span></span><br><span class="line">context.fill();<span class="comment">//具体的填充</span></span><br><span class="line"></span><br><span class="line">context.lineWidth = <span class="number">5</span>;<span class="comment">//笔尖所画线的粗细程度</span></span><br><span class="line">context.strokeStyle = <span class="string">"#005588"</span>;<span class="comment">//要渲染的颜色</span></span><br><span class="line">context.stroke();<span class="comment">//具体渲染</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>想画一个蓝色的三角形和一条黑色线段，结果发现线条的颜色都变成了黑色。原因是canvas绘制是基于状态的绘制</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">context.moveTo(<span class="number">100</span>, <span class="number">100</span>);<span class="comment">//笔尖的起始点</span></span><br><span class="line">context.lineTo(<span class="number">700</span>, <span class="number">700</span>);<span class="comment">//笔尖要到达的点</span></span><br><span class="line">context.lineTo(<span class="number">100</span>, <span class="number">700</span>);<span class="comment">//笔尖要到达的点</span></span><br><span class="line">context.lineTo(<span class="number">100</span>, <span class="number">100</span>);<span class="comment">//笔尖要到达的点(首尾衔接)</span></span><br><span class="line"></span><br><span class="line">context.lineWidth = <span class="number">5</span>;<span class="comment">//笔尖所画线的粗细程度</span></span><br><span class="line">context.strokeStyle = <span class="string">"#005588"</span>;<span class="comment">//要渲染的颜色</span></span><br><span class="line">context.stroke();<span class="comment">//具体渲染(这里只绘制了三角形)</span></span><br><span class="line"></span><br><span class="line">context.moveTo(<span class="number">200</span>, <span class="number">100</span>);<span class="comment">//把笔尖新定位一下</span></span><br><span class="line">context.lineTo(<span class="number">700</span>, <span class="number">600</span>);</span><br><span class="line">context.strokeStyle = <span class="string">"black"</span>;</span><br><span class="line">context.stroke();(这里不仅绘制了三角形还绘制了线段)</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>如何分开这两个路径绘制的装态?当然是context.beginPath()与context.closePath()</strong></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">context.beginPath();</span><br><span class="line">context.moveTo(<span class="number">100</span>, <span class="number">100</span>);<span class="comment">//笔尖的起始点</span></span><br><span class="line">context.lineTo(<span class="number">700</span>, <span class="number">700</span>);<span class="comment">//笔尖要到达的点</span></span><br><span class="line">context.lineTo(<span class="number">100</span>, <span class="number">700</span>);<span class="comment">//笔尖要到达的点</span></span><br><span class="line">context.lineTo(<span class="number">100</span>, <span class="number">100</span>);<span class="comment">//笔尖要到达的点(首尾衔接)</span></span><br><span class="line">context.closePath();</span><br><span class="line"></span><br><span class="line">context.lineWidth = <span class="number">5</span>;<span class="comment">//笔尖所画线的粗细程度</span></span><br><span class="line">context.strokeStyle = <span class="string">"#005588"</span>;<span class="comment">//要渲染的颜色</span></span><br><span class="line">context.stroke();<span class="comment">//具体渲染</span></span><br><span class="line"></span><br><span class="line">context.beginPath();</span><br><span class="line">context.moveTo(<span class="number">200</span>, <span class="number">100</span>);<span class="comment">//把笔尖新定位一下</span></span><br><span class="line">context.lineTo(<span class="number">700</span>, <span class="number">600</span>);</span><br><span class="line">context.closePath();</span><br><span class="line"></span><br><span class="line">context.strokeStyle = <span class="string">"black"</span>;</span><br><span class="line">context.stroke();</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="Summary">Summary</h1><ul>
-<li>Draw<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">context.moveTo(x, y);</span><br><span class="line">context.lineTo(x, y);</span><br><span class="line"></span><br><span class="line">context.beginPath();</span><br><span class="line">context.closePath();</span><br><span class="line"></span><br><span class="line">context.lineWidth</span><br><span class="line">context.strokeStyle</span><br><span class="line">context.fillStyle</span><br><span class="line"></span><br><span class="line">context.stroke()</span><br><span class="line">context.fill()</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol>
-<li><p>首先，我们可以用<strong>moveTo</strong>和<strong>lineTo</strong>两个方法来定义一条路径。<br>  如果想要把多条路径隔开处理，就需要用<strong>beginPath</strong>与<strong>closePath</strong>来包裹路径。</p>
-</li>
-<li><p><strong>lineWidth</strong>→<code>定义线条的粗细</code><br>  <strong>strokeStyle</strong>→<code>定义线条的颜色</code><br>  <strong>fillStyle</strong>→<code>定义路径所包裹区块的填充颜色</code><br>  <strong>stroke()</strong>→<code>线条的具体绘制</code><br>  <strong>fill()</strong>→<code>路径所包裹区块的具体绘制</code></p>
-</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://otouc.com/2015/07/02/canvas-first/" data-id="cibp3tloo0005o1qbz8gwrrpb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/07/03/canvas-line/" data-id="cibqmyi4y000h8uqbc9obe1gd" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/canvas初体验/">canvas初体验</a></li></ul>
@@ -337,6 +546,10 @@
 
   
   
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
 </section>
         
           <aside id="sidebar">
@@ -347,7 +560,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas/">canvas</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas初体验/">canvas初体验</a><span class="tag-list-count">4</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/canvas初体验/">canvas初体验</a><span class="tag-list-count">11</span></li></ul>
     </div>
   </div>
 
@@ -356,7 +569,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/canvas/" style="font-size: 10px;">canvas</a> <a href="/tags/canvas初体验/" style="font-size: 20px;">canvas初体验</a>
+      <a href="/tags/canvas初体验/" style="font-size: 10px;">canvas初体验</a>
     </div>
   </div>
 
@@ -365,7 +578,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">5</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">11</span></li></ul>
     </div>
   </div>
 
@@ -377,23 +590,23 @@
       <ul>
         
           <li>
-            <a href="/2015/07/04/canvas-countdown/">canvas-倒计时</a>
+            <a href="/2015/07/05/canvas-rectangle/">canvas-矩形</a>
           </li>
         
           <li>
-            <a href="/2015/07/03/canvas-arc-circle/">canvas-画弧和圆</a>
+            <a href="/2015/07/05/canvas-transform-2/">canvas-图形变换2</a>
           </li>
         
           <li>
-            <a href="/2015/07/03/canvas-tangram/">canvas-画一个七巧板</a>
+            <a href="/2015/07/05/canvas-lineCap/">canvas-线条的帽子</a>
           </li>
         
           <li>
-            <a href="/2015/07/03/canvas-line/">canvas-从线开始</a>
+            <a href="/2015/07/05/canvas-star/">canvas-五角星</a>
           </li>
         
           <li>
-            <a href="/2015/07/02/canvas-first/">canvas系列之初体验①</a>
+            <a href="/2015/07/05/canvas-transform/">canvas-图形变换</a>
           </li>
         
       </ul>
@@ -408,7 +621,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2015 Dimitri Wang<br>
+      &copy; 2015 John Doe<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
@@ -423,7 +636,7 @@
 </nav>
     
 
-<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
